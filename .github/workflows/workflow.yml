@@ -10,7 +10,7 @@ jobs:
   build:
     name: Build Web
     env:
-      my_secret: $
+      my_secret: ${{secrets.COMMIT_SECRET}}
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +30,7 @@ jobs:
           git config --global user.email truemaxdh@gmail.com
           git config --global user.name truemaxdh
           git status
-          git remote add origin https://truemaxdh:$@github.com/truemaxdh/admob-ads-in-flutter.git
+          git remote add origin https://truemaxdh:${{secrets.COMMIT_SECRET}}@github.com/truemaxdh/admob-ads-in-flutter.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
