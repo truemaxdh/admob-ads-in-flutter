@@ -8,6 +8,9 @@ on:
 
 jobs:
   build:
+    name: Build Web
+    env:
+      my_secret: $
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +28,6 @@ jobs:
           cd starter/build/web
           git init
           git config --global user.email truemaxdh@gmail.com
-          git config --global user.name truemaxdh
           git status
           git remote add origin https://$@github.com/truemaxdh/admob-ads-in-flutter.git
           git checkout -b gh-pages
