@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v1
         with:
           channel: 'dev'
@@ -30,7 +30,7 @@ jobs:
           git config --global user.email truemaxdh@gmail.com
           git config --global user.name truemaxdh
           git status
-          git remote add origin https://$@github.com/truemaxdh/admob-ads-in-flutter.git
+          git remote add origin https://truemaxdh:$@github.com/truemaxdh/admob-ads-in-flutter.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
